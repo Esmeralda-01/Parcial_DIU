@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="img/dia-de-la-madre.png">
+    <title>Artevent</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="sideNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarResponsive">
+            <a href="index.html">
+                <img src="img/dia-de-la-madre.png" alt="" width="80px" height="70px">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Acerca de</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="equipo_trabajo.html">Equipo de
+                        trabajo</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="servicios.html">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="empleos.html">Empleos</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="opiniones.html">Opiniones</a></li>
+                <li class="nav-item dropdown ml-md-auto">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown">Creditos</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another
+                            action</a> <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider">
+                        </div> <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="d-flex justify-content-center mt-3">Trabaja con nosotros</h1>
+            <div class="col-md-8">
+                <table class="table table-stripped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Fecha de cierre</th>
+                            <th scope="col">Contacto</th>
+                            <th scope="col">Aplicar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td class="nombre_oferta">no se</td>
+                            <td>no ae</td>
+                            <td>sas</td>
+                            <td>as</td>
+                            <!--
+                                      <td>
+                                        <a href="https://icons.getbootstrap.com/icons/calendar2-check-fill/">
+                                            <i class="bi bi-calendar2-check-fill"></i>
+                                        </a>
+                                    </td>   
+                                    -->
+
+                            <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    aplicar
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="col-md-4">
+                <h3>Haz aplicado a la oferta:</h3>
+                <div id="empleos" style="display: block;">
+
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form method="POST" action="<?php echo CONTROLLER_PATH; ?>viajes.php">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Deja tu infomación de contacto aquí
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="mb-3">
+                                <label for="destino" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="destino"
+                                    aria-describedby="textHelp">
+                                <div id="textHelp" class="form-text">Ingrese su nombre.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tipo_hospedaje" class="form-label">Número de contacto</label>
+                                <input type="text" class="form-control" id="numero" aria-describedby="textHelp">
+                                <div id="textHelp" class="form-text">Ingrese un número de 10 cifras.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="precio" class="form-label">Edad</label>
+                                <input type="number" class="form-control" id="edad" name="precio"
+                                    aria-describedby="numberHelp">
+                                <div id="numberHelp" class="form-text">Ingrese su edad.</div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary" onclick="registrarEmpleo()">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/empleos.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
