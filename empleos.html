@@ -50,38 +50,28 @@
                             <th scope="col">Descripción</th>
                             <th scope="col">Fecha de cierre</th>
                             <th scope="col">Contacto</th>
-                            <th scope="col">Aplicar</th>
                         </tr>
                     </thead>
                     <tbody>
 
                         <tr>
-                            <td class="nombre_oferta">no se</td>
+                            <td>no se</td>
                             <td>no ae</td>
                             <td>sas</td>
                             <td>as</td>
-                            <!--
-                                      <td>
-                                        <a href="https://icons.getbootstrap.com/icons/calendar2-check-fill/">
-                                            <i class="bi bi-calendar2-check-fill"></i>
-                                        </a>
-                                    </td>   
-                                    -->
-
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    aplicar
-                                </button>
-                            </td>
                         </tr>
                     </tbody>
                 </table>
+                <button style="background-color: transparent;" type="button" class="btn btn-primary"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img src="img/calendario.png" width="50px" height="50px">
+                    <div id="textHelp" class="form-text">Aplica pulsando aquí.</div>
+                </button>
 
             </div>
             <div class="col-md-4">
                 <h3>Haz aplicado a la oferta:</h3>
-                <div id="empleos" style="display: block;">
+                <div id="saludos" style="display: block;">
 
                 </div>
             </div>
@@ -90,7 +80,7 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form method="POST" action="<?php echo CONTROLLER_PATH; ?>viajes.php">
+                    <form>
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Deja tu infomación de contacto aquí
                             </h5>
@@ -98,11 +88,15 @@
                         </div>
 
                         <div class="modal-body">
-
+                            <div class="mb-3">
+                                <label for="destino" class="form-label">Nombre de la oferta a la que desea
+                                    aplicar</label>
+                                <input type="text" class="form-control" id="nombre_oferta" aria-describedby="textHelp">
+                                <div id="textHelp" class="form-text">Ingrese el nombre de la oferta.</div>
+                            </div>
                             <div class="mb-3">
                                 <label for="destino" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" name="destino"
-                                    aria-describedby="textHelp">
+                                <input type="text" class="form-control" id="nombre" aria-describedby="textHelp">
                                 <div id="textHelp" class="form-text">Ingrese su nombre.</div>
                             </div>
                             <div class="mb-3">
@@ -118,8 +112,9 @@
                             </div>
                         </div>
                         <div class="modal-footer">
+
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="submit" class="btn btn-primary" onclick="registrarEmpleo()">Enviar</button>
+                            <button type="submit" class="btn btn-primary" onclick="registrarSaludo()">Enviar</button>
                         </div>
                     </form>
                 </div>
