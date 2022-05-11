@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="icon" href="img/dia-de-la-madre.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Artevent</title>
 </head>
 
@@ -26,16 +27,9 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="servicios.html">Servicios</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="empleos.html">Empleos</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="opiniones.html">Opiniones</a></li>
-                <li class="nav-item dropdown ml-md-auto">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
-                        data-toggle="dropdown">Creditos</a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another
-                            action</a> <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider">
-                        </div> <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" data-bs-toggle="modal"
+                        data-bs-target="#creditosModal">Creditos</a></li>
+
             </ul>
         </div>
     </nav>
@@ -55,19 +49,44 @@
                     <tbody>
 
                         <tr>
-                            <td>no se</td>
-                            <td>no ae</td>
-                            <td>sas</td>
-                            <td>as</td>
+                            <td>Animador turno completo</td>
+                            <td>Esta vacante esta disponible para personas que deseean trabjar con nosotros tiempo
+                                completo</td>
+                            <td>22/06/2022</td>
+                            <td>artevent@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Animador medio turno</td>
+                            <td>Esta vacante tiene disponibilidad en varios horarios, comunicate con nosotros para saber
+                                cual te sirve mas</td>
+                            <td>30/05/2022</td>
+                            <td>artevent@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Animador fines de semana</td>
+                            <td>Esta vacante es solo para fines de semana, excelente para jovenes en busca de trabajo
+                            </td>
+                            <td>1/07/2022</td>
+                            <td>artevent@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Lider de eventos</td>
+                            <td>Unica vacante, debes contar con experiencia manejando personal y eventos en general</td>
+                            <td>30/05/2022</td>
+                            <td>artevent@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Cocinero auxiliar</td>
+                            <td>Debes contar con experiencia como cocinero</td>
+                            <td>25/05/2022</td>
+                            <td>artevent@gmail.com</td>
                         </tr>
                     </tbody>
                 </table>
-                <button style="background-color: transparent;" type="button" class="btn btn-primary"
-                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="d-flex justify-content-center">
                     <img src="img/calendario.png" width="50px" height="50px">
-                    <div id="textHelp" class="form-text">Aplica pulsando aquí.</div>
-                </button>
-
+                </a>
+                <div id="textHelp" class="form-text d-flex justify-content-center">Aplica pulsando aquí</div>
             </div>
             <div class="col-md-4">
                 <h3>Haz aplicado a la oferta:</h3>
@@ -115,6 +134,33 @@
 
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-primary" onclick="registrarSaludo()">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Modal creditos -->
+        <div class="modal fade" id="creditosModal" tabindex="-1" aria-labelledby="creditosModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="creditosModalLabel">Infomación de la persona a cargo del
+                                desarrollo de este sitio web
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>
+                                Esmeralda Perdomo Sanchez <br>
+                                Desarrolladora Front-end, con conocimientos en el manejo de Bootstrap, JavaScript, CSS y HTML.
+                            </p>
+                            <p>Para el desarrollo de este sitio web se tuvo en cuenta el grilla de Bootstrap para esto se uso la pagina Layoutit. Agregación de infomación de forma dinamica con localStorage y JavaScript y el diseño esta hecho en CSS.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </form>
                 </div>

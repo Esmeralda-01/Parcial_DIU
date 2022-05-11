@@ -19,25 +19,16 @@
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarResponsive">
             <a href="index.html">
-             <img src="img/dia-de-la-madre.png" alt="" width="80px" height="70px">   
-            </a>            
+                <img src="img/dia-de-la-madre.png" alt="" width="80px" height="70px">   
+               </a>  
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Acerca de</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="equipo_trabajo.html">Equipo de
-                        trabajo</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="equipo_trabajo.html">Equipo de trabajo</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="servicios.html">Servicios</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="empleos.html">Empleos</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="opiniones.html">Opiniones</a></li>
-                <li class="nav-item dropdown ml-md-auto">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
-                        data-toggle="dropdown">Creditos</a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another
-                            action</a> <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider">
-                        </div> <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" data-bs-toggle="modal"
+                    data-bs-target="#creditosModal">Creditos</a></li>
             </ul>
         </div>
     </nav>
@@ -99,6 +90,33 @@
 
         </div>
     </div>
+         <!-- Modal creditos -->
+         <div class="modal fade" id="creditosModal" tabindex="-1" aria-labelledby="creditosModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog">
+             <div class="modal-content">
+                 <form>
+                     <div class="modal-header">
+                         <h5 class="modal-title" id="creditosModalLabel">Infomación de la persona a cargo del
+                             desarrollo de este sitio web
+                         </h5>
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+
+                     <div class="modal-body">
+                         <p>
+                             Esmeralda Perdomo Sanchez <br>
+                             Desarrolladora Front-end, con conocimientos en el manejo de Bootstrap, JavaScript, CSS y HTML.
+                         </p>
+                         <p>Para el desarrollo de este sitio web se tuvo en cuenta el grilla de Bootstrap para esto se uso la pagina Layoutit. Agregación de infomación de forma dinamica con localStorage y JavaScript y el diseño esta hecho en CSS.</p>
+                     </div>
+                     <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                     </div>
+                 </form>
+             </div>
+         </div>
+     </div>
     <script src="js/bootstrap.min.js"></script>
 </body>
 
